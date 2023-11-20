@@ -1,0 +1,49 @@
+This code is a Streamlit application that allows users to upload business card images, extract information from them using OCR (Optical Character Recognition), and perform various operations on the extracted data.
+
+Here's a breakdown of the code:
+
+Importing the necessary libraries:
+
+pandas for data manipulation and analysis.
+streamlit for building the web application.
+easyocr for performing OCR on the business card images.
+psycopg2 for connecting to a PostgreSQL database.
+PIL (Python Imaging Library) for working with images.
+cv2 (OpenCV) for image processing.
+os for file and directory operations.
+matplotlib.pyplot for visualizations.
+re for regular expressions.
+Establishing a connection to the PostgreSQL database using the psycopg2 library.
+
+Creating the Streamlit application:
+
+Defining the page background image using CSS.
+Setting the title of the application using st.title.
+Creating a file uploader widget using st.file_uploader to upload the business card image.
+Creating a sidebar menu using st.sidebar.selectbox with options to add, view, update, and delete business card information.
+Implementing different actions based on the selected menu choice:
+
+If the choice is "Add":
+
+Displaying the uploaded image using st.image.
+Extracting information from the image using OCR and EasyOCR.
+Inserting the extracted information into the PostgreSQL database using SQL queries.
+If the choice is "View":
+
+Retrieving and displaying the stored business card information from the PostgreSQL database using SQL queries and pd.DataFrame.
+If the choice is "Update":
+
+Creating a dropdown menu to select a business card to update.
+Displaying the current information for the selected business card.
+Allowing users to modify the information and update it in the database.
+If the choice is "Delete":
+
+Creating a dropdown menu to select a business card to delete.
+Displaying the current information for the selected business card.
+Providing a button to confirm the deletion and removing the business card information from the database.
+Displaying the Streamlit application using st.caption.
+
+This code provides a basic framework for building a business card management application using Streamlit, OCR, and a PostgreSQL database. You can further customize and enhance the functionality according to your specific requirements.
+
+Let me know if you need any further clarification!
+FEEL FREE TO FORK OR REPORT ANY ISSUES 
