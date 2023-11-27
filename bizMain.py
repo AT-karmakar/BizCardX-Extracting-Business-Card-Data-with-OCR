@@ -67,7 +67,7 @@ reader = easyocr.Reader(['en'])
 conn = psycopg2.connect(
                 dbname="BizCardX",
                 user="postgres",
-                password="dinhata",
+                password="yourPassword",
                 host="localhost",
                 port="5432"
             )
